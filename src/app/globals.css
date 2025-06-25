@@ -1,0 +1,132 @@
+@import 'tailwindcss';
+
+:root {
+	--radius: 0.65rem;
+	--background: #0a0a0a;
+	--foreground: #ededed;
+	--card: #0a0a0a;
+	--muted-foreground: #949494;
+	--primary: #ffa600;
+	--primary-foreground: #000000;
+	--border: #ffffff1a;
+
+	/*
+		-- Liquid glass effect --
+	*/
+
+	/* Inner shadow */
+	--shadow-offset: 0;
+	--shadow-blur: 15px;
+	--shadow-spread: -5px;
+	--shadow-color: rgba(100, 100, 100, 0.5);
+
+	/* Painted glass */
+	--tint-color: 60, 60, 60;
+	--tint-opacity: 0.2;
+
+	/* Background frost */
+	--frost-blur: 1.8px;
+
+	/* SVG noise/distortion */
+	--noise-frequency: 0.008;
+	--distortion-strength: 77;
+
+	/* Outer shadow blur */
+	--outer-shadow-blur: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+		--card: #0a0a0a;
+		--muted-foreground: #949494;
+		--primary: #ffa600;
+		--primary-foreground: #000000;
+		--secondary: #ffffff;
+		--border: #ffffff1a;
+	}
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme inline {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius: var(--radius);
+	--radius-lg: calc(var(--radius) + 2px);
+	--radius-xl: calc(var(--radius) + 4px);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-border: var(--border);
+	--inset-shadow: inset 0 -20px 80px -20px #ffffff1f;
+	--inset-shadow-hover: inset 0 -10px 90px -10px #ffffff1f;
+
+	--animate-float-slow: floatSlow 10s ease-in-out infinite;
+	--animate-float-fast: floatFast 5s ease-in-out infinite;
+	--animate-pulse-slow: pulse 4s ease-in-out infinite;
+
+	--animate-marquee-left: scrolling-left 40s linear infinite;
+	--animate-marquee-right: scrolling-right 40s linear infinite;
+
+	@keyframes floatSlow {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-80px);
+		}
+	}
+
+	@keyframes floatFast {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-160px);
+		}
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.2);
+		}
+	}
+
+	@keyframes scrolling-left {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes scrolling-right {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+}
+
+::selection {
+	background-color: var(--primary);
+	color: var(--primary-foreground);
+}

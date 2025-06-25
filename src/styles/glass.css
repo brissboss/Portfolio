@@ -1,0 +1,31 @@
+.svg-container {
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.glassmorphism-element {
+	width: fit-content;
+	height: 45px;
+	backdrop-filter: url(#displacementFilter);
+	-webkit-backdrop-filter: blur(6px);
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #4a4a4a;
+	transition: all;
+	transition-duration: 0.2s;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: transparent;
+}
+
+.glassmorphism-element:hover {
+	background-color: #000000cc;
+}
+
+.glass {
+	backdrop-filter: url(#displacementFilter);
+	-webkit-backdrop-filter: blur(6px);
+}
