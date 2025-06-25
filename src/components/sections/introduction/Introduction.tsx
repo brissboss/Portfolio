@@ -106,7 +106,7 @@ export default function Introduction() {
 				}}
 				size="icon"
 				variant="blur"
-				className="absolute bottom-12 left-1/2 z-100 hidden hover:-translate-y-1 sm:bottom-4 sm:block"
+				className="absolute bottom-12 left-1/2 z-100 hidden items-center justify-center hover:-translate-y-1 sm:bottom-4 sm:flex"
 			>
 				<ArrowDown />
 			</Button>
