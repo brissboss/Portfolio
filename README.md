@@ -1,6 +1,6 @@
 # Portfolio — Théo Brissiaud
 
-<img src="./public/screens/portfolio.png" alt="Portfolio about section" />
+<img src="./public/projects/portfolio.png" alt="Portfolio about section" />
 
 Ce portfolio présente mon parcours, mes projets web, et mes compétences techniques. Il est conçu comme une vitrine personnelle simple, élégante et dynamique, avec une navigation fluide et une touche de créativité.
 
