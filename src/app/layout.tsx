@@ -5,6 +5,7 @@ import LenisProvider from '@/components/LenisProvider';
 import Header from '@/components/layout/header/Header';
 import Footer from '@/components/layout/footer/Footer';
 import LiquidGlassSvg from '@/components/LiquidGlassSvg';
+import { Analytics } from '@vercel/analytics/next';
 
 const outfit = Outfit({
 	subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
 					<div className="flex-1">{children}</div>
 					<Footer />
 				</LenisProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
